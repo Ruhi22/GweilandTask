@@ -18,14 +18,16 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:padding="8dp"
-            android:src="@android:drawable/ic_menu_manage"
-            android:tint="@color/colorGrayLight"
+            style="@style/Normal_Drawable"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:paddingTop="8dp"
+            android:paddingRight="16dp"
+            android:src="@drawable/setting"
+            android:tint="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
     </LinearLayout>
 
@@ -37,7 +39,7 @@
         android:text="@string/exchanges"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textAllCaps="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -46,9 +48,10 @@
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginEnd="60dp"
-        android:padding="8dp"
-        android:src="@android:drawable/ic_popup_reminder"
-        android:tint="@color/colorGrayLight"
+        android:paddingTop="4dp"
+        android:src="@drawable/bell"
+        style="@style/Normal_Drawable"
+        android:tint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
