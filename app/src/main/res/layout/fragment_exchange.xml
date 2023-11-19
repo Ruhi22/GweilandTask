@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="12dp"
-            android:layout_marginLeft="4dp"
+            android:layout_marginLeft="8dp"
             android:background="@drawable/round_border"
             android:layout_weight="0.2">
 
@@ -59,7 +59,7 @@
                 android:layout_marginStart="12dp"
                 android:textSize="12sp"
                 android:text="@string/filter"
-                android:textColor="@color/colorGray" />
+                android:textColor="@color/colorGrayLight" />
 
         </LinearLayout>
 
