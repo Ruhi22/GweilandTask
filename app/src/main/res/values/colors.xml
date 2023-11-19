@@ -11,7 +11,7 @@
     <color name="red">#FD0000</color>
 
     <color name="colorPrimary">#0969C3</color>
-    <color name="colorPrimaryDark">#0969C3</color>
+    <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#0969C3</color>
     <color name="colorOrange">#FF7A00</color>
     <color name="colorGreen">#009688</color>
@@ -20,7 +20,7 @@
     <color name="colorGrayVeryLight">#E6E5E5</color>
     <color name="colorLightBlue">#87CEFA</color>
     <color name="colorLightTeal">#E0F2F1</color>
-    <color name="colorstatusBar">#163F5A</color>
+    <color name="colorstatusBar">#000000</color>
     <color name="colorToolbar">#163F5A</color>
     <color name="bnavIconText">#FF286893</color>
     <color name="tabs">#295C69</color>

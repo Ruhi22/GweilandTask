@@ -7,4 +7,5 @@
     <string name="exchange_fragment">Exchange Fragment</string>
     <string name="launch_pads_fragment">Launch Pads Fragment</string>
     <string name="wallet_fragment">Wallet Fragment</string>
+
 </resources>

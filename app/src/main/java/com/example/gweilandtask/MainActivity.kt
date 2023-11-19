@@ -27,8 +27,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
+        window.statusBarColor = ContextCompat.getColor(this, R.color.black)
 
-        window.setStatusBarColor(ContextCompat.getColor(applicationContext,R.color.colorstatusBar))
+        //window.setStatusBarColor(ContextCompat.getColor(applicationContext,R.color.colorstatusBar))
 
         fl_parentContainer = findViewById(R.id.fl_parentContainer)
 
