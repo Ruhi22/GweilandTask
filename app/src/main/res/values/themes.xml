@@ -32,4 +32,17 @@
         <item name="android:scaleX">0.8</item>
         <item name="android:scaleY">0.8</item>
     </style>
+
+    <style name="filter_border">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/bnavIconText</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:background">@drawable/round_border</item>
+    </style>
 </resources>
