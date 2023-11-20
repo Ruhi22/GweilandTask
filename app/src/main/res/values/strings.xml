@@ -9,5 +9,7 @@
     <string name="wallet_fragment">Wallet Fragment</string>
     <string name="filter">Filter</string>
     <string name="search_cryptocurrency">Search Cryptocurrency</string>
+    <string name="cryptocurrency">Cryptocurrency</string>
+    <string name="nft">NFT</string>
 
 </resources>
