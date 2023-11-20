@@ -24,4 +24,6 @@
     <color name="colorToolbar">#163F5A</color>
     <color name="bnavIconText">#FF286893</color>
     <color name="tabs">#295C69</color>
+    <color name="green">#36E870</color>
+    <color name="lightGreen">#DCF3DE</color>
 </resources>
