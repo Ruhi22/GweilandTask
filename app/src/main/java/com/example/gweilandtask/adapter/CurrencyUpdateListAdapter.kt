@@ -8,13 +8,15 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gweilandtask.R
+import com.example.gweilandtask.fragments.ExchangeFragment
+import kotlinx.coroutines.NonDisposableHandle.parent
 
-class CurrencyUpdateListAdapter(private val dataSet: ArrayList<String>) :
+class CurrencyUpdateListAdapter(private val dataSet: ArrayList<String>, private val listener: AdapterView.OnItemClickListener) :
     RecyclerView.Adapter<CurrencyUpdateListAdapter.ViewHolder>() {
 
     lateinit var listItem: ArrayList<String>
 
-    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListener {
         val tv_currencyTitle: TextView
         val cv_currencyCard: CardView
 
@@ -23,7 +25,7 @@ class CurrencyUpdateListAdapter(private val dataSet: ArrayList<String>) :
             tv_currencyTitle = view.findViewById(R.id.tv_currencyTitle)
             cv_currencyCard = view.findViewById(R.id.cv_currencyCard)
 
-            //cv_currencyCard.setOnClickListener(this)
+            cv_currencyCard.setOnClickListener(this)
 
             /*cv_jobCard.setOnClickListener {v: View ->
                 val position: Int = adapterPosition
@@ -36,12 +38,20 @@ class CurrencyUpdateListAdapter(private val dataSet: ArrayList<String>) :
 
         }
 
-        /*override fun onClick(v: View?) {
+
+        /*override fun onClick(p0: View?) {
+            val position: Int = adapterPosition
+            if(position!=RecyclerView.NO_POSITION) {
+                listener.onItemClick(parent, p0, position, id)
+            }
+        }*/
+
+        override fun onClick(v: View?) {
             val position: Int = adapterPosition
             if(position!= RecyclerView.NO_POSITION) {
                 listener.onItemClick(null, v, position, itemId!!)
             }
-        }*/
+        }
 
     }
 
@@ -74,4 +84,5 @@ class CurrencyUpdateListAdapter(private val dataSet: ArrayList<String>) :
     interface onItemClickListener{
         fun onItemClick(position: Int)
     }
+
 }
