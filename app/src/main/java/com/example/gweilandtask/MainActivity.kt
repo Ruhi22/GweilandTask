@@ -1,28 +1,33 @@
 package com.example.gweilandtask
 
 import android.annotation.SuppressLint
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.view.View
+import android.widget.AdapterView
 import android.widget.FrameLayout
-import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
+import com.example.gweilandtask.adapter.CurrencyUpdateListAdapter
 import com.example.gweilandtask.fragments.EShopFragment
 import com.example.gweilandtask.fragments.ExchangeFragment
 import com.example.gweilandtask.fragments.LaunchPadsFragment
 import com.example.gweilandtask.fragments.WalletFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+import java.security.AccessController.getContext
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     lateinit var fl_parentContainer: FrameLayout
 
     lateinit var bnv_bottomNavigation: BottomNavigationView
+    //lateinit var rv_currency_update_list: RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -31,7 +36,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         //window.setStatusBarColor(ContextCompat.getColor(applicationContext,R.color.colorstatusBar))
 
+
+
         fl_parentContainer = findViewById(R.id.fl_parentContainer)
+        //rv_currency_update_list = findViewById(R.id.rv_currency_update_list)
+
+
+        //var arrayList_for_recyclerView = ArrayList<String>{"ETH", "BNB", "ADA", "XRP", "SOL"}
+
 
 
 
@@ -171,4 +183,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         TODO("Not yet implemented")
         return true
     }
+
+
 }

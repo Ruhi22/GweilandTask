@@ -1,11 +1,16 @@
 package com.example.gweilandtask.fragments
 
+
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.gweilandtask.R
+import com.example.gweilandtask.adapter.CurrencyUpdateListAdapter
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,10 +22,11 @@ private const val ARG_PARAM2 = "param2"
  * Use the [ExchangeFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ExchangeFragment : Fragment() {
+class ExchangeFragment : Fragment(){
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    lateinit var rv_currency_update_list: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,8 +41,34 @@ class ExchangeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_exchange, container, false)
+
+        var root: View =  inflater.inflate(com.example.gweilandtask.R.layout.fragment_exchange, container, false)
+        rv_currency_update_list = root.findViewById(com.example.gweilandtask.R.id.rv_currency_update_list)
+
+        val arrayList_for_recyclerView: ArrayList<String> = ArrayList<String>(5)
+        arrayList_for_recyclerView.add("ETH")
+        arrayList_for_recyclerView.add("BNB")
+        arrayList_for_recyclerView.add("ADA")
+        arrayList_for_recyclerView.add("XRP")
+        arrayList_for_recyclerView.add("SOL")
+
+
+        /*val myRecyclerViewAdapter = CurrencyUpdateListAdapter(arrayList_for_recyclerView)
+        rv_currency_update_list.adapter = myRecyclerViewAdapter*/
+
+        rv_currency_update_list.setHasFixedSize(true)
+        rv_currency_update_list.setLayoutManager(LinearLayoutManager(activity))
+        var myRecyclerViewAdapter = CurrencyUpdateListAdapter(arrayList_for_recyclerView)
+        rv_currency_update_list.setAdapter(myRecyclerViewAdapter)
+
+        return root
+
+
     }
+
+    /*override fun onItemClick(position: Int) {
+        TODO("Not yet implemented")
+    }*/
 
     companion object {
         /**
